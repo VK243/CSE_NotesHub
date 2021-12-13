@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSE NotesHub</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Google Fonts -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Link -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- CSS stylesheet link -->
 
   <link rel="stylesheet" href="style.css">
 
-  <title>CSE NotesHub</title>
+
 </head>
+
 <body>
-  <section>
-    <div class="">
-      <nav class="navbar">
+  <section class="coloured-section">
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">CSE NotesHub</a>
-        <div class="">
-          <ul>
-            <button class="btn nav-item" type="button" name="signin">SIGN IN</button>
-            <button class="btn nav-item" type="button" name="login">LOG IN</button>
+
+        <div>
+          <ul class="navbar-nav ">
+            <li class="nav-item"><a class="nav-link" href="#pricing">SIGN IN</a> </li>
+            <li class="nav-item"><a class="nav-link" href="#cta">LOG IN</a> </li>
           </ul>
         </div>
+
       </nav>
 
-      <div class="row">
-        <div class="col-6">
-          <img src="templates\undraw_book_lover_re_rwjy.svg" alt="">
-        </div>
-        <div class="col-6">
-          <h1 class="big-heading">search</h1>
-          <input type="text" name="" value="" placeholder="search">
-        </div>
-      </div>
     </div>
+  
+    <div class="landing-page row">
+      <div class="col-lg-6" id="landing-heading">
+        <h1 class="big-heading">Find all your CSE notes in one place.</h1>
+      </div>
+    <div class="col-lg-6">
+      <img src="templates/undraw_book_lover_re_rwjy.svg" alt="">
+    </div>
+
+  </div>
   </section>
 
 
   <script src="index.js" charset="utf-8"></script>
 </body>
+
 </html>

@@ -1,1 +1,45 @@
 /* CSS file*/
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.coloured-section{
+ background-color: #000000;
+  color: rgba(255, 255, 255, 0);
+}
+
+.navbar{
+  padding: 0 0 1rem;
+}
+
+.navbar-brand{
+  font-size: 2.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  padding:20px 800px 0 150px;
+}
+
+.nav-item{
+padding:0 18px;
+}
+
+.nav-link{
+font-size: 1.5rem;
+font-family: "Montserrat-Light",sans-serif;
+}
+
+.landing-page{
+  padding-top: 70px;
+}
+
+.big-heading{
+  color: #ffff;
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+#landing-heading{
+  padding: 50px 0 0 30px;
+}
