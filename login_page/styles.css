@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #b17272;
+}
+
+.card {
+    min-height: 80vh;
+    transform-style: preserve-3d;
+    width: 35rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    background: #F5F5F5;
+}
+
+.logo {
+    padding-top: 4%;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 25rem;
+    z-index: 2;
+    transition: all 0.5s ease-out;
+}
+
+form button {
+    text-transform: uppercase;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    outline: 0;
+}
+
+form .message {
+    margin: 15px 0 0;
+    font-size: 10px;
+    color: #b3b3b3;
+}
+
+form .message a {
+    text-decoration: none;
+}
