@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -10,14 +11,6 @@ body {
     align-items: center;
     justify-content: center;
     perspective: 1000px;
-}
-
-container {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #b17272;
 }
 
 .card {
@@ -42,24 +35,57 @@ container {
     transition: all 0.5s ease-out;
 }
 
+form{
+    margin-top: 40px;
+}
+
+.login-form input{
+    font-size: 20px;
+    padding: 15px;
+    outline: 0;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
 form button {
     text-transform: uppercase;
     width: 100%;
     border: 0;
     padding: 15px;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
+    font-size: 20px;
+    align-items: center;
     cursor: pointer;
     outline: 0;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #364182;
+}
+
+form button:hover{
+    background-color: #364182;
+    color: #fff;
+}
+
+.login-btn{
+    margin: 30px 0 10px 0;
+}
+
+.signin-btn{
+    margin: 25px 0 10px 0;
 }
 
 form .message {
     margin: 15px 0 0;
-    font-size: 10px;
-    color: #b3b3b3;
+    font-size: 17px;
+    color: #888;
+    text-align: center;
 }
 
 form .message a {
     text-decoration: none;
+    font-size: 20px;
+    color: #364182;
 }
