@@ -30,7 +30,7 @@
 
 <body>
 
-  <section class="landing_page">
+  <section class="landing_page" id="landing-page">
 
     <!--Navbar -->
 
@@ -39,8 +39,8 @@
       <div class="nav-links" id="navLinks">
         <ul>
           <li><a href="">SEARCH</a></li>
-          <li><a href="">FEATURES</a></li>
-          <li><a href="">SEMESTER</a></li>
+          <li><a href="#feature">FEATURES</a></li>
+          <li><a href="#sem">SEMESTER</a></li>
           <li><a href="/login_page/login.html">LOGIN</a></li>
         </ul>
       </div>
@@ -57,42 +57,112 @@
   </section>
 
   <!-- Features -->
-  <section class="features">
-    <h1>Features</h1>
-    <div class="fea-container">
-      <div class="row">
-        <div class="col-md-4 card">
+  <section class="features" id="feature">
+    <div class="header">Features</div>
 
+    <div class="fea-card-wrap">
+
+
+        <div class="fea-card">
+          <div class="fea-inner">
             <img class="card-img" src="templates/search_img.svg" alt="search_img">
-
-          <div class="card_name">
-            <h4>Search</h4>
-          </div>
+          <div class="card-name">Search</div>
         </div>
-        <div class="col-md-4 card">
+      </div>
 
+        <div class="fea-card">
+          <div class="fea-inner">
             <img class="card-img" src="templates/upload_img.svg" alt="upload_img">
-
-          <div class="card_name">
-            <h4>Upload</h4>
-          </div>
+          <div class="card-name">Upload</div>
         </div>
-        <div class="col-md-4 card">
+        </div>
 
+        <div class="fea-card">
+          <div class="fea-inner">
             <img class="card-img" src="templates/download_img.svg" alt="download_img">
-        
-          <div class="card_name">
-            <h4>Download</h4>
-          </div>
+          <div class="card-name">Download</div>
         </div>
-
       </div>
 
     </div>
 
+  </section>
+
+  <!-- Semester -->
+
+  <section class="semester" id="sem">
+    <div class="wrapper">
+      <div class="header">Semester</div>
+
+        <div class="card-wrap">
+
+          <div class="card-item">
+            <div class="card-inner">
+              <img src="templates/num1.svg" alt="num1">
+              <div class="sem-name">SEM</div>
+            </div>
+          </div>
+
+          <div class="card-item">
+            <div class="card-inner">
+              <img src="templates/num2.svg" alt="num1">
+              <div class="sem-name">SEM</div>
+            </div>
+          </div>
+
+        <div class="card-item">
+          <div class="card-inner">
+            <img src="templates/num3.svg" alt="num1">
+            <div class="sem-name">SEM</div>
+          </div>
+        </div>
+
+        <div class="card-item">
+          <div class="card-inner">
+            <img src="templates/num4.svg" alt="num1">
+            <div class="sem-name">SEM</div>
+          </div>
+        </div>
+
+        <div class="card-item">
+          <div class="card-inner">
+            <img src="templates/num5.svg" alt="num1">
+            <div class="sem-name">SEM</div>
+          </div>
+        </div>
+
+        <div class="card-item">
+          <div class="card-inner">
+            <img src="templates/num6.svg" alt="num1">
+            <div class="sem-name">SEM</div>
+          </div>
+        </div>
+
+        <div class="card-item">
+          <div class="card-inner">
+            <img src="templates/num7.svg" alt="num1">
+          <div class="sem-name">SEM</div>
+          </div>
+        </div>
+
+        <div class="card-item">
+          <div class="card-inner">
+            <img src="templates/num8.svg" alt="num1">
+          <div class="sem-name">SEM</div>
+          </div>
+        </div>
+
+    </div>
 
   </section>
 
+  <!-- Footer -->
+
+  <footer class="footer">
+    <h5 class="footer-logo" ><a href="#landing-page">CSE NotesHUB</a></h5>
+    <br>
+    <p class="copyright">@ Copyright 2022 CSE_NotesHUB </p>
+  </footer>
 
   <!-- Javascript script link -->
 

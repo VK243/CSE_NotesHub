@@ -2,12 +2,14 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
 
 .landing_page{
   min-height: 100vh;
   width: 100%;
+  background: #F5F5F5;
   background-image: url(templates/book_img.svg);
   background-position: center;
   background-size: cover;
@@ -35,6 +37,7 @@ nav{
   display: inline-block;
   padding: 8px 12px;
   position: relative;
+  text-align: right;
 }
 
 .nav-links ul li a{
@@ -50,7 +53,6 @@ nav{
   background: #474554;
   display: block;
   margin: auto;
-
   transition: 0.5s;
 }
 
@@ -83,7 +85,6 @@ nav{
   text-decoration: none;
   color: #fff;
   border: 1px solid #000;
-  border-radius: 10%;
   padding: 12px 34px;
   font-size: 17px;
   background: transparent;
@@ -92,21 +93,182 @@ nav{
 }
 
 .textbox-btn:hover{
-  border: 1px  solid #364182;
+  border: 1px  solid #fff;
   background: #364182;
   transition: 0.5s;
   color: #fff;
 }
 
 
+/* Features */
+.features{
+  text-align: center;
+}
 
+.header{
+  width: 100%;
+  height: 75px;
+  background: #364182;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
 
+.fea-card-wrap{
+  background: #F5F5F5 ;
+  padding: 20px;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.fea-card-wrap .fea-card{
+  padding: 15px 25px;
+  width: 33%;
+}
 
+.fea-card-wrap .fea-inner{
+  background: #fff;
+  border-radius: 5px;
+  padding: 35px 20px;
+  min-width: 300px;
+  min-height: 350px;
+  width: 100%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
 
+.card-img{
+  align-items: center;
+  align-content: center;
+  width: 250px;
+  height: 300px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
 
+.fea-card-wrap .fea-inner .card-name{
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
+@media screen and (max-width:1020px){
+  .fea-card-wrap .fea-card{
+    width: 50%;
+  }
+  .wrapper .header{
+    font-size: 16px;
+    height: 60px;
+  }
+}
 
+@media screen and (max-width:700px){
+  .fea-card-wrap .fea-card{
+    width: 100%;
+  }
+  .features .header{
+    font-size: 14px;
+  }
+}
+
+/* semester */
+
+.semester{
+  text-align: center;
+  padding-top: 25px;
+}
+
+.card-wrap{
+  background: #F5F5F5 ;
+  padding: 20px;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-wrap .card-item{
+  padding: 15px 25px;
+  width: 25%;
+}
+
+.card-wrap .card-inner{
+  background: #fff;
+  border-radius: 5px;
+  padding: 35px 20px;
+  min-width: 225px;
+  min-height: 315px;
+  width: 100%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-wrap .card-inner img{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 5px;
+}
+
+.card-wrap .card-inner .sem-name{
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+}
+
+@media screen and (max-width:1024px){
+  .card-wrap .card-item{
+    width: 33%;
+  }
+}
+
+@media screen and (max-width:768px){
+  .card-wrap .card-item{
+    width: 50%;
+  }
+  .wrapper .header{
+    font-size: 16px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width:568px){
+  .card-wrap .card-item{
+    width: 100%;
+  }
+  .wrapper .header{
+    font-size: 14px;
+  }
+}
+
+/* Footer */
+
+.footer{
+  color: #fff;
+  background:#364182 ;
+  padding: 3% 10% 3%;
+}
+
+.footer-logo a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+}
+
+.copyright{
+  color: #F5F5F5;
+}
 
 
 
