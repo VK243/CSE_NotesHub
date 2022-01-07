@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.landing_page{
+    min-height: 100vh;
+    width: 100%;
+    background: #F5F5F5;
+    background-image: url(templates/book_img.svg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+  
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.nav_logo{
+    width: 225px;
+}
+  
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+  
+.nav-links li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    text-align: right;
+}
+  
+.nav-links li a{
+    color:#364182 ;
+    text-decoration: none;
+    font-size: 20px;
+}
+  
+.nav-links li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #474554;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+  
+.nav-links li:hover::after{
+    width: 100%;
+}
+  
+.textbox{
+    width: 90%;
+    color:#2c2c2c ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.textbox h1{
+    font-size: 62px;
+    font-weight: 700;
+}
+
+.textbox p{
+    margin: 10px 0 40px;
+    font-size: 35px;
+}
+
+.textbox-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #000;
+    padding: 12px 34px;
+    font-size: 17px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.textbox-btn:hover{
+    border: 1px  solid #fff;
+    background: #364182;
+    transition: 0.5s;
+    color: #fff;
+}
+
+
+.header{
+    padding: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* Search bar */
+
+.search_bar{
+    width: 100vh;
+    height: 70px;
+    margin: 30px auto;
+    padding: 6px 10px 6px 10px;
+    border-radius: 50px;
+    background: #fff;
+}
+
+.header{
+
+}
+
+.search_bar form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.search_bar form input{
+    display: block;
+    border: 0;
+    outline: none;
+}
+
+.search_bar form button{
+    background: #364182;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search_bar form button img{
+    width: 15px;
+    margin-top: 7px;
+}
+
+.search-sem{
+    flex: 1;
+}
+
+.search_bar form label{
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 700px){
+
+    .search_bar{
+        width: 90%;
+        height: 100%;
+        margin: 30px auto;
+        padding: 20px 10px 30px;
+        border-radius: 5px;
+        position: relative;
+        background-color: #D9D7E9;
+    }
+
+    .search_bar form{
+        display: block;
+    }
+
+    .search_bar form input{
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .search_bar form button{
+        position: absolute;
+        top: 190px;
+        left: 50%;
+        transform: translate(-50%,50%);
+    }
+}

@@ -23,7 +23,7 @@
 
   <!-- CSS stylesheet link -->
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
 
 </head>
@@ -34,16 +34,15 @@
 
     <!--Navbar -->
 
-    <nav>
+    <nav id="Nav">
       <a href="index.html"><img class="nav_logo" src="templates/logo.svg" alt="logo"></a>
-      <div class="nav-links" id="navLinks">
-        <ul>
-          <li><a href="">SEARCH</a></li>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="html/search.html">SEARCH</a></li>
           <li><a href="#feature">FEATURES</a></li>
           <li><a href="#sem">SEMESTER</a></li>
-          <li><a href="/login_page/login.html">LOGIN</a></li>
+          <li><a href="html/login.html">LOGIN</a></li>
         </ul>
-      </div>
+        <i class="fas fa-ellipsis-v" onclick="togglebtn()"></i>
     </nav>
 
     <!-- Title -->
@@ -58,31 +57,30 @@
 
   <!-- Features -->
   <section class="features" id="feature">
-    <div class="header">Features</div>
+    <div class="fea-header">Features</div>
 
     <div class="fea-card-wrap">
 
-
         <div class="fea-card">
-          <div class="fea-inner">
+          <div class="fea-inner" href="index/search.html">
             <img class="card-img" src="templates/search_img.svg" alt="search_img">
           <div class="card-name">Search</div>
         </div>
       </div>
 
         <div class="fea-card">
-          <div class="fea-inner">
-            <img class="card-img" src="templates/upload_img.svg" alt="upload_img">
-          <div class="card-name">Upload</div>
-        </div>
-        </div>
-
-        <div class="fea-card">
-          <div class="fea-inner">
+          <div class="fea-inner" href="index/search.html">
             <img class="card-img" src="templates/download_img.svg" alt="download_img">
           <div class="card-name">Download</div>
         </div>
       </div>
+
+      <div class="fea-card">
+        <div class="fea-inner" href="index/admin.html">
+          <img class="card-img" src="templates/admin.svg" alt="admin_img">
+        <div class="card-name">Admin</div>
+      </div>
+    </div>
 
     </div>
 
@@ -92,7 +90,7 @@
 
   <section class="semester" id="sem">
     <div class="wrapper">
-      <div class="header">Semester</div>
+      <div class="sem-header">Semester</div>
 
         <div class="card-wrap">
 
