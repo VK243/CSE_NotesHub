@@ -59,6 +59,7 @@ form button {
     align-items: center;
     cursor: pointer;
     outline: 0;
+    font-weight: bolder;
     letter-spacing: 2px;
     font-weight: 400;
     color: #364182;
