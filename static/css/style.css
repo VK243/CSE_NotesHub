@@ -3,14 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .landing_page{
   min-height: 100vh;
   width: 100%;
   background: #F5F5F5;
-  background-image: url(/templates/book_img.svg);
+  background-image: url(/static//template/book_img.svg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -73,6 +73,7 @@ nav{
 .textbox h1{
   font-size: 62px;
   font-weight: 700;
+  font-family: 'Lato', sans-serif;
 }
 
 .textbox p{
@@ -160,15 +161,17 @@ nav .fa-ellipsis-v{
 
 /* Features */
 .features{
-  padding-top: 25px;
+  padding-top: 35px;
   text-align: center;
   background: #8685EF ;
   align-items: center;
+  padding-bottom: 25px;
 }
 
 .fea-header{
   width: 100%;
   height: 75px;
+  font-family: 'Lato', sans-serif;
   background: #8685EF;
   color: #fff;
   align-items: center;
@@ -259,11 +262,14 @@ nav .fa-ellipsis-v{
 
 .semester{
   text-align: center;
+  background: #F5F5F5;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 20px;
+  padding-top: 35px;
 }
 
 .wrapper{
   padding-top:35px;
-  background: #F5F5F5;
 }
 
 .sem-header{
@@ -282,7 +288,7 @@ nav .fa-ellipsis-v{
 
 .card-wrap{
   background: #F5F5F5 ;
-  padding: 20px;
+  padding:30px 20px 40px 20px;
   width: 100%;
   justify-content: space-between;
   display: flex;
@@ -297,7 +303,7 @@ nav .fa-ellipsis-v{
 .card-wrap .card-inner{
   background: #fff;
   border-radius: 5px;
-  padding: 35px 20px;
+  padding: 35px 25px;
   min-width: 225px;
   min-height: 200px;
   width: 100%;
