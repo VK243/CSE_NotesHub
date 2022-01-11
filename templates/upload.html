@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block body %}
+  <!-- CSS stylesheet link -->
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/uploadstyle.css') }}">
+
+</head>
+
+<body>
+  <!--Navbar -->
+
+  <nav id="Nav">
+    <a href="/"><img class="nav_logo" src="{{ url_for('static', filename='template/logo.svg') }}" alt="logo"></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/upload">UPLOAD</a></li>
+        <li><a href="/document">DOCUMENTS</a></li>
+      </ul>
+      <i class="fas fa-ellipsis-v" onclick="togglebtn()"></i>
+  </nav>
+
+          <!-- Upload table -->
+
+
+          <section class="upload">
+            <h1 class="title">Upload Document</h1>
+            <form class="up-form row">
+              <div class="form-field col-lg-6">
+                <label class="label" for="name">Document Name</label>
+                  <input id="name" class="input-text js-input" type="text" required>
+              </div>
+              <div class="form-field col-lg-6 ">
+                <label class="label" for="email">Semester</label>
+                  <input id="email" class="input-text js-input" type="number" required>
+              </div>
+              <div class="form-field col-lg-6 ">
+                <label class="label" for="company">Subject Code</label>
+                  <input id="company" class="input-text js-input" type="text" required>
+              </div>
+                <div class="form-field col-lg-6 ">
+                  <label class="label" for="phone">Module No.</label>
+                  <input id="phone" class="input-text js-input" type="number" required>
+              </div>
+              <div class="form-field col-lg-12">
+                <label class="label" for="message">Drive link</label>
+                  <input id="message" class="input-text js-input" type="url" required>
+              </div>
+              <div class="form-field col-lg-12">
+                  <input class="submit-btn" type="submit" value="Submit">
+              </div>
+            </form>
+        </section>
+
+
+        
+
+      {% endblock %}

@@ -1,0 +1,223 @@
+
+  
+  nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav_logo{
+    width: 225px;
+  }
+  
+  .nav-links{
+    flex: 1;
+    text-align: right;
+  }
+  
+  .nav-links li{
+    list-style: none;
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    text-align: right;
+  }
+  
+  .nav-links li a{
+    color:#364182 ;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .nav-links li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #474554;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  
+  .nav-links li:hover::after{
+    width: 100%;
+  }
+
+  nav .fa-ellipsis-v{
+    display: none;
+  }
+
+
+  
+  @media only screen and (max-width: 840px){
+  
+    .nav_logo{
+      position: fixed;
+      top: 1.5%;
+      left: 7%;
+    }
+  
+    nav{
+    position: fixed;
+      top: 0;
+      z-index: 100;
+      display: inline-block;
+      width: 100%;
+      padding: 100px 7% 0;
+      background:#D9D7E9 ;
+      text-align: center;
+      color: #fff;
+      font-size: 28px;
+      max-height: 100px;
+      overflow: hidden;
+      transition: max-height 0.5s;
+    }
+  
+    nav .nav-links li{
+    margin: 10px 0;
+    display: block;
+    text-align: center;
+    }
+    
+    nav .fa-ellipsis-v{
+    display: block;
+    position: fixed;
+    top: 3.5%;
+    right: 7%;
+    color:#364182 ;
+    }
+  
+    .nav-links li::after{
+      height: 1px;
+    }
+  
+    .nav-links li:hover::after{
+      width: 100%;
+    }
+  
+    .hidemenu{
+      max-height: 400px;
+    }
+    
+    #contact{
+        margin-top: 125px;
+        padding-top: 10px;
+    }
+
+    .section-content{
+        padding: 2px 20px;
+    }
+
+    .contact-section{
+        padding: 25px;
+    }
+
+    .container{
+        padding-left: 13.5px;
+    }
+
+
+}
+
+
+
+
+
+/*Contact sectiom*/
+
+.content-header{
+    font-family: 'Oleo Script', cursive;
+    color:#000;
+    font-size: 45px;
+  }
+  
+  .section-content{
+    text-align: center; 
+    color: #364182;
+  }
+  #contact{
+    font-family: 'Teko', sans-serif;
+    padding-top: 6px;
+    width: 100%;
+    height: 900px;
+    color : #000; 
+    letter-spacing: 0.5px;   
+  }
+
+  .container{
+      padding-left: 30px;
+      width: 100%;
+      margin: 0;
+  }
+  .contact-section{
+    padding: 50px;
+  }
+  
+  .form-group{
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+  label{
+    font-size: 1.5em;
+    line-height: 1.3em;
+    font-weight: normal;
+    color: #364182;
+  }
+
+  .form-control{
+    font-size: 1.3em;
+    color: #080808;
+  }
+
+  textarea.form-control {
+      height: 135px;
+     /* margin-top: px;*/
+  }
+  
+  .submit{
+    margin-top: 10px;
+    font-size: 1.1em;
+    float: right;
+    width: 150px;
+    background-color: #364182;
+    color: #fff;
+  }
+
+  .submit:hover{
+      color: #000;
+      background-color: transparent;
+      border: 0.5px solid #888;
+  }
+
+
+
+  /* Footer */
+
+  .footer{
+    position:relative;
+    color: #F5F5F5;
+    background:#364182;
+    padding: 3% 10% 3%;
+  }
+
+  .footer-logo a{
+    text-decoration: none;
+    color: #F5F5F5;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .footer-logo a:hover{
+    color: #D9D7E9;
+  }
+
+  .copyright{
+    color: #F5F5F5;
+    font-weight: 500;
+  }
+
+    

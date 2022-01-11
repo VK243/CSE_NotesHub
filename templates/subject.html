@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+  <!-- CSS stylesheet link -->
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/substyle.css') }}">
+
+</head>
+
+<body>
+    <!--Navbar -->
+
+    <nav id="Nav">
+      <a href="/"><img class="nav_logo" src="{{ url_for('static', filename='template/logo.svg') }}" alt="logo"></a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/search">SEARCH</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+          <li><a href="/login">LOGIN</a></li>
+          <li> <a href="/signin">SIGNUP</a></li>
+        </ul>
+        <i class="fas fa-ellipsis-v" onclick="togglebtn()"></i>
+    </nav>
+
+
+    {% endblock %}

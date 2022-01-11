@@ -1,0 +1,11 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/enotes_db",
+    "prod_uri": "mysql://root:@localhost/enotes_db",
+    "landing_header": "CSE in one place",
+    "landing_tagline": "Get your CSE related notes, question paper and syllabus here.",
+    "github": "https://github.com/VK243/CSE_NotesHub"
+  }
+}

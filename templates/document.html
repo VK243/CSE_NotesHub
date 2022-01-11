@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% block body %}
+  <!-- CSS stylesheet link -->
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/docstyle.css') }}">
+
+</head>
+
+<body>
+    <!--Navbar -->
+
+    <nav id="Nav">
+      <a href="/"><img class="nav_logo" src="{{ url_for('static', filename='template/logo.svg') }}" alt="logo"></a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/search">SEARCH</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+        </ul>
+        <i class="fas fa-ellipsis-v" onclick="togglebtn()"></i>
+    </nav>
+
+
+        <h1>SUBJECT:</h1>
+            
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th><h1>NUMBER</h1></th>
+                        <th><h1>DOCUMENT NAME</h1></th>
+                        <th><h1>MODULE</h1></th>
+                        <th><h1></h1></th>
+                        <th><h1></h1></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>MATHS</td>
+                        <td>2</td>
+                        <td>LINK</td>
+                        <td>LINK</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>MATHS</td>
+                        <td>2</td>
+                        <td>LINK</td>
+                        <td>LINK</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>MATHS</td>
+                        <td>2</td>
+                        <td>LINK</td>
+                        <td>LINK</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>MATHS</td>
+                        <td>2</td>
+                        <td>LINK</td>
+                        <td>LINK</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>MATHS</td>
+                        <td>2</td>
+                        <td>LINK</td>
+                        <td>LINK</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>MATHS</td>
+                        <td>2</td>
+                        <td>LINK</td>
+                        <td>LINK</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>MATHS</td>
+                        <td>2</td>
+                        <td>LINK</td>
+                        <td>LINK</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            {% endblock %}
