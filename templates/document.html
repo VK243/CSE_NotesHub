@@ -1,8 +1,8 @@
-{% extends "layout.html" %}
-{% block body %}
-  <!-- CSS stylesheet link -->
+{% extends "layout.html" %} {% block body %}
+<!-- CSS stylesheet link -->
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/docstyle.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/docstyle.css') }}">
+<link href="{{ url_for('static', filename='css/adminstyles.css') }}" rel="stylesheet" />
 
 </head>
 
@@ -10,78 +10,64 @@
     <!--Navbar -->
 
     <nav id="Nav">
-      <a href="/"><img class="nav_logo" src="{{ url_for('static', filename='template/logo.svg') }}" alt="logo"></a>
+        <a href="/"><img class="nav_logo" src="{{ url_for('static', filename='template/logo.svg') }}" alt="logo"></a>
         <ul class="nav-links" id="navLinks">
-          <li><a href="/search">SEARCH</a></li>
-          <li><a href="/contact">CONTACT</a></li>
+            <li><a href="/search">SEARCH</a></li>
+            <li><a href="/contact">CONTACT</a></li>
+            <li><a href="/login">LOGIN</a></li>
+            <li> <a href="/signin">SIGNUP</a></li>
         </ul>
         <i class="fas fa-ellipsis-v" onclick="togglebtn()"></i>
     </nav>
 
+    <div id="layoutSidenav_content" style="padding: 0 30px ;">
+        <main>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4" style="text-align: center;">ALL DOCUMENTS</h1>
+                <ol class="breadcrumb mb-4">
+                </ol>
 
-        <h1>SUBJECT:</h1>
-            
-            <table class="container">
-                <thead>
-                    <tr>
-                        <th><h1>NUMBER</h1></th>
-                        <th><h1>DOCUMENT NAME</h1></th>
-                        <th><h1>MODULE</h1></th>
-                        <th><h1></h1></th>
-                        <th><h1></h1></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>MATHS</td>
-                        <td>2</td>
-                        <td>LINK</td>
-                        <td>LINK</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>MATHS</td>
-                        <td>2</td>
-                        <td>LINK</td>
-                        <td>LINK</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>MATHS</td>
-                        <td>2</td>
-                        <td>LINK</td>
-                        <td>LINK</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>MATHS</td>
-                        <td>2</td>
-                        <td>LINK</td>
-                        <td>LINK</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>MATHS</td>
-                        <td>2</td>
-                        <td>LINK</td>
-                        <td>LINK</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>MATHS</td>
-                        <td>2</td>
-                        <td>LINK</td>
-                        <td>LINK</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>MATHS</td>
-                        <td>2</td>
-                        <td>LINK</td>
-                        <td>LINK</td>
-                    </tr>
-                </tbody>
-            </table>
 
-            {% endblock %}
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>Document Table
+                    </div>
+                    <div class="card-body">
+                        <table id="datatablesSimple">
+                            <thead>
+                                <tr>
+                                    <th>Document name</th>
+                                    <th>Module No</th>
+                                    <th>Document Link</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Document name</th>
+                                    <th>Module No</th>
+                                    <th>Document Link</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                {% for document in document %}
+
+                                <tr>
+                                    <td>{{document.doc_name}}</td>
+                                    <td>{{document.mod_no}}</td>
+                                    <td><a href="{{document.link}}" target="blank"><i class="fab fa-google-drive"></i></a></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='datatables.js') }}"></script>
+    {% endblock %}

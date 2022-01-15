@@ -1,19 +1,21 @@
- {% extends "adminlayout.html" %} {% block body %}
+{% extends "adminlayout.html" %} {% block body %}
 <div id="layoutSidenav">
     <div id="layoutSidenav_nav" class="theme-sidenav">
         <nav class="sb-sidenav accordion " id="sidenavAccordion">
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Core</div>
-                    <a class="nav-link sidenav" href="/admindashboard" style="font-weight: 800;">
-                        <div class="sb-nav-link-icon"><i class="far fa-file-alt"></i></div>
+                    <a class="nav-link sidenav" href="/admindashboard">
+                        <div class="sb-nav-link-icon">
+                            <i class="far fa-file-alt"></i>
+                        </div>
                         Documents
                     </a>
                     <a class="nav-link sidenav" href="/upload">
                         <div class="sb-nav-link-icon"><i class="fas fa-file-upload"></i></div>
                         Upload
                     </a>
-                    <a class="nav-link sidenav" href="/users">
+                    <a class="nav-link sidenav" href="/users" style="font-weight: 800;">
                         <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                         Users
                     </a>
@@ -32,53 +34,38 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Documents</h1>
+                    <h1 class="mt-4">Users</h1>
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">All Documents</li>
+                        <li class="breadcrumb-item active">All Users</li>
                     </ol>
 
 
                     <div class="card mb-4">
                         <div class="card-header">
-                            <i class="fas fa-table me-1"></i> Document Table
+                            <i class="fas fa-table me-1"></i> Users Table
                         </div>
                         <div class="card-body">
                             <table id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>Sl.No</th>
-                                        <th>Document name</th>
-                                        <th>Sem No</th>
-                                        <th>Subject Code</th>
-                                        <th>Module No</th>
-                                        <th>Document Link</th>
-                                        <th>Delete</th>
-                                        <th>Date Time</th>
+                                        <th>USN</th>
+                                        <th>Username</th>
+                                        <th>Email</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
                                     <tr>
-                                        <th>Sl.No</th>
-                                        <th>Document name</th>
-                                        <th>Sem No</th>
-                                        <th>Subject Code</th>
-                                        <th>Module No</th>
-                                        <th>Document link</th>
-                                        <th>Date Time</th>
+                                        <th>USN</th>
+                                        <th>Username</th>
+                                        <th>Email</th>
                                     </tr>
                                 </tfoot>
                                 <tbody>
-                                    {% for document in document %}
-
+                                    {% for user in user %}
                                     <tr>
-                                        <td>{{document.doc_no}}</td>
-                                        <td>{{document.doc_name}}</td>
-                                        <td>{{document.sem_no}}</td>
-                                        <td>{{document.sub_no}}</td>
-                                        <td>{{document.mod_no}}</td>
-                                        <td><a href="{{document.link}}" target="blank"><i class="fab fa-google-drive"></i></a></td>
-                                        <td><a href="{{document.doc_no}}"><i class="far fa-trash-alt"></i></a></td>
-                                        <td>{{document.date_time}}</td>
+                                        <td>{{user.usn}}</td>
+                                        <td>{{user.user_name}}</td>
+                                        <td>{{user.email}}</td>
                                     </tr>
                                     {% endfor %}
                                 </tbody>
@@ -87,6 +74,7 @@
                     </div>
                 </div>
             </main>
+
 
 
 
