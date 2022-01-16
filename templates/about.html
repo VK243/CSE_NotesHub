@@ -1,6 +1,12 @@
 {% extends "layout.html" %} {% block body %}
+<!-- google fonts -->
 
+<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+
+<!-- CSS link -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 
 </head>
 
@@ -14,6 +20,19 @@
         </ul>
         <i class="fas fa-ellipsis-v" onclick="togglebtn()"></i>
     </nav>
+    <div class="about">
+        <div class="about-heading">
+            <h1 style="font-family: 'Oleo Script', cursive;">ABOUT</h1>
+        </div>
+        <div class="img">
+            <img src="{{ url_for('static', filename='template/about.svg') }}" alt="about_img">
+        </div>
+        <div class="content">
+            <p></p>
+
+        </div>
+
+    </div>
 
 
     {% endblock %}

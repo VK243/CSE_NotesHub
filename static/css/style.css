@@ -7,6 +7,10 @@
       font-family: 'Raleway', sans-serif;
   }
   
+  html {
+      scroll-behavior: smooth;
+  }
+  
   a {
       text-decoration: none;
       color: #364182;
@@ -81,7 +85,43 @@
       align-self: center;
       justify-self: center;
       width: 100%;
+      height: 100vh;
       z-index: 1;
+  }
+  
+  #square1,
+  #square2,
+  #square3,
+  #square4 {
+      animation: square 4s infinite linear;
+      transform-origin: center;
+      transform-box: fill-box;
+  }
+  
+  #center_bubble {
+      animation: centralbubble 1s ease-in-out infinite alternate;
+      transform-origin: bottom;
+  }
+  
+  #darkbubble1,
+  #lightbubble2 {
+      transform-origin: bottom;
+      animation: bubble1 3s linear infinite;
+      -moz-animation: bubble1 3s linear infinite;
+      -webkit-animation: bubble1 3s linear infinite;
+  }
+  
+  #darkbubble2,
+  #lightbubble1 {
+      transform-origin: bottom;
+      animation: bubble2 3.5s linear infinite;
+      -moz-animation: bubble2 3.5s linear infinite;
+      -webkit-animation: bubble2 3.5s linear infinite;
+  }
+  
+  #book {
+      animation: book 1s ease-in-out infinite alternate;
+      transform-origin: bottom;
   }
   
   .textbox {
@@ -228,8 +268,8 @@
   .card-img {
       align-items: center;
       align-content: center;
-      width: 250px;
-      height: 300px;
+      width: 200px;
+      height: 250px;
       margin-bottom: 5px;
       margin-left: 5px;
   }
@@ -321,7 +361,7 @@
   
   .card-wrap .card-inner {
       background: #fff;
-      border-radius: 5px;
+      border-radius: 10px;
       padding: 35px 25px;
       min-width: 225px;
       min-height: 200px;
@@ -331,8 +371,9 @@
   }
   
   .card-wrap .card-inner img {
-      width: 100px;
-      height: 100px;
+      width: 200px;
+      height: 200px;
+      padding: 20px;
       margin-bottom: 5px;
   }
   
@@ -345,9 +386,16 @@
       text-align: right;
   }
   
-  .card-wrap .card-inner:hover {
+  .card-inner:hover {
+      transform: translateZ(500px);
       transform: scale(1.1);
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+      background: #d9d7e9c5;
+  }
+  
+  .card-inner img:hover {
+      transform: scale(1.15);
+      background: transparent;
+      color: #364182;
   }
   
   @media screen and (max-width:1024px) {
@@ -412,6 +460,10 @@
       color: #F5F5F5;
       font-weight: 500;
   }
+  
+  .about-heading {
+      font-family: 'Oleo Script', cursive;
+  }
   /* #F5F5F5
   #364182
   #8685EF
@@ -421,3 +473,82 @@
   #F5F5F5
   #474554
   #ACA7CB */
+  /* Animation keyframes */
+  
+  @keyframes hideshow {
+      0% {
+          opacity: 1;
+      }
+      10% {
+          opacity: 1;
+      }
+      15% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 0;
+      }
+  }
+  
+  @keyframes bubble1 {
+      0% {
+          transform: scaleY(1);
+      }
+      25% {
+          transform: scaleY(0.8);
+      }
+      50% {
+          transform: scaleY(.92);
+      }
+      75% {
+          transform: scaleY(.86);
+      }
+      100% {
+          transform: scaleY(1);
+      }
+  }
+  
+  @keyframes bubble2 {
+      0% {
+          transform: scaleY(1);
+      }
+      25% {
+          transform: scaleY(0.8);
+      }
+      50% {
+          transform: scaleY(1);
+      }
+      75% {
+          transform: scaleY(0.86);
+      }
+      100% {
+          transform: scaleY(1);
+      }
+  }
+  
+  @keyframes square {
+      from {
+          transform: rotateZ(0deg);
+      }
+      to {
+          transform: rotateZ(360deg);
+      }
+  }
+  
+  @keyframes centralbubble {
+      from {
+          transform: rotateX(0deg);
+      }
+      to {
+          transform: rotateX(30deg);
+      }
+  }
+  
+  @keyframes book {
+      from {
+          transform: rotateX(0deg);
+      }
+      to {
+          transform: rotateX(15deg);
+      }
+  }

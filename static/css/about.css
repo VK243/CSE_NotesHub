@@ -1,0 +1,22 @@
+.about {
+    text-align: center;
+    align-items: center;
+}
+
+.about-heading {
+    font-size: 5rem;
+    font-size: 45px;
+    color: #364182;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.img {
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+.content {
+    z-index: 1;
+}

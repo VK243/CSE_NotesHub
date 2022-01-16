@@ -2,7 +2,6 @@
 
 var navBar = document.getElementById("Nav");
 
-function togglebtn(){
+function togglebtn() {
     navBar.classList.toggle("hidemenu");
 }
-
