@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% block body %}
 <!-- CSS stylesheet link -->
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/docstyle.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/substyle.css') }}">
 <link href="{{ url_for('static', filename='css/adminstyles.css') }}" rel="stylesheet" />
 
 </head>
@@ -18,39 +18,44 @@
         <i class="fas fa-ellipsis-v" onclick="togglebtn()"></i>
     </nav>
 
-    <div id="layoutSidenav_content" style="padding: 0 30px ;">
+    <div id="layoutSidenav_content" style="padding: 0px 30px;">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-4" style="text-align: center;">ALL DOCUMENTS</h1>
+                <h1 class="mt-4" style="text-align: center;">SEARCH</h1>
                 <ol class="breadcrumb mb-4">
                 </ol>
 
 
                 <div class="card mb-4">
                     <div class="card-header">
-                        <i class="fas fa-table me-1"></i>Document Table
+                        <i class="fas fa-table me-1"></i> Search inside the Table
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple">
                             <thead>
                                 <tr>
+                                    <th>Sem no</th>
                                     <th>Document name</th>
+                                    <th>Subject code</th>
                                     <th>Module No</th>
                                     <th>Document Link</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
+                                    <th>Sem no</th>
                                     <th>Document name</th>
+                                    <th>Subject code</th>
                                     <th>Module No</th>
                                     <th>Document Link</th>
                                 </tr>
                             </tfoot>
                             <tbody>
                                 {% for document in document %}
-
                                 <tr>
+                                    <td>{{document.sem_no}}</td>
                                     <td>{{document.doc_name}}</td>
+                                    <td>{{document.sem_no}}</td>
                                     <td>{{document.mod_no}}</td>
                                     <td><a href="{{document.link}}" target="blank"><i class="fab fa-google-drive"></i></a></td>
                                 </tr>

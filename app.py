@@ -92,6 +92,14 @@ def signin():
 
     return render_template('signin.html')
 
+# Search Page
+
+@app.route("/search", methods = ['GET'])
+def search():
+    document = Document.query.filter_by().all()
+    return render_template('search.html', params=params, document=document )
+
+
 # Contacts page
 
 @app.route("/contact", methods = ['GET', 'POST'])
@@ -150,6 +158,12 @@ def admin():
     document= Document.query.filter_by().all()
     return render_template('admin.html', document=document)
 
+@app.route("/deletedoc/<string:docno_slug>", methods = ['GET' ,'POST'])
+def deledoc(docno_slug):
+    Document.query.filter_by(doc_no = docno_slug).delete()
+    db.session.commit()
+    return redirect(url_for("admin"))
+
 @app.route("/upload", methods = ['GET', 'POST'])
 def upload():
     if (request.method == 'POST'):
@@ -168,6 +182,12 @@ def upload():
 def user():
     user = User.query.filter_by().all()
     return render_template('users.html', user=user)
+
+@app.route("/deleteuser/<string:usn_slug>", methods = ['GET' ,'POST'])
+def deleuser(usn_slug):
+    User.query.filter_by(usn = usn_slug).delete()
+    db.session.commit()
+    return redirect(url_for("user"))
 
 @app.route("/conadmin", methods=['GET', 'POST'])
 def conadmin():

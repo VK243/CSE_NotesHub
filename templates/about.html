@@ -1,5 +1,4 @@
-{% extends "layout.html" %}
-{% block body %}
+{% extends "layout.html" %} {% block body %}
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
@@ -10,10 +9,11 @@
 
     <nav id="Nav">
         <a href="/"><img class="nav_logo" src="{{ url_for('static', filename='template/logo.svg') }}" alt="logo"></a>
-          <ul class="nav-links" id="navLinks">
+        <ul class="nav-links" id="navLinks">
             <li><a href="/about">ABOUT</a></li>
-          </ul>
-          <i class="fas fa-ellipsis-v" onclick="togglebtn()"></i>
-      </nav>
+        </ul>
+        <i class="fas fa-ellipsis-v" onclick="togglebtn()"></i>
+    </nav>
 
-{% endblock %}
+
+    {% endblock %}

@@ -11690,7 +11690,7 @@ body {
 
 .logo {
     background: #fff;
-    width: 95%;
+    width: 200px;
 }
 
 .toggle {
@@ -11783,4 +11783,10 @@ body {
 
 .theme a:hover::after {
     width: 100%;
+}
+
+@media only screen and (max-width: 840px) {
+    .logo {
+        width: 100px;
+    }
 }

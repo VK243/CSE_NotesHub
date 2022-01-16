@@ -57,6 +57,7 @@
             <nav id="Nav">
                 <a href="/"><img class="nav_logo" src="{{ url_for('static', filename='template/logo.svg') }}" alt="logo"></a>
                 <ul class="nav-links" id="navLinks">
+                    <li><a href="#feature">FEATURES</a></li>
                     <li><a href="/contact">CONTACT</a></li>
                     <li><a href="/about">ABOUT</a></li>
                     <li><a href="/login">LOGIN</a></li>
@@ -83,6 +84,15 @@
 
             <div class="fea-card">
                 <div class="fea-inner">
+                    <a href="/search">
+                        <img class="card-img" src="{{ url_for('static', filename='template/search_img.svg') }}" alt="search_img">
+                        <div class="card-name">Search</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="fea-card">
+                <div class="fea-inner">
                     <a href="#sem">
                         <img class="card-img" src="{{ url_for('static', filename='template/download_img.svg') }}" alt="download_img">
                         <div class="card-name">Download</div>
@@ -98,16 +108,6 @@
                     </a>
                 </div>
             </div>
-
-            <div class="fea-card">
-                <div class="fea-inner">
-                    <a href="/about">
-                        <img class="card-img" src="{{ url_for('static', filename='template/about.svg') }}" alt="aboutus_img">
-                        <div class="card-name">About Us</div>
-                    </a>
-                </div>
-            </div>
-
 
         </div>
 
