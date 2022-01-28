@@ -447,6 +447,10 @@
       padding: 2px 10px 10px 5px;
       font-size: 30px;
   }
+
+  .icons .linkedin:hover{
+    color: #87CEEB;
+  }
   
   .icons .github:hover {
       color: #000;

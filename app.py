@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request,flash,redirect,url_for,session,logging
+from flask import Flask,render_template,request,redirect,url_for,session
 from flask_sqlalchemy import SQLAlchemy
 import json
 from datetime import datetime
@@ -8,6 +8,7 @@ with open('config.json', 'r') as c:
 
 local_server = True
 app = Flask(__name__)
+app.secret_key = 'super_secret_key'
 
 if(local_server):
     app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
@@ -70,7 +71,7 @@ def login():
 
         login = User.query.filter_by(usn=usn, passwd=passwod).first()
         if login is not None:
-            return redirect(url_for("home"))
+            return redirect(url_for("contact"))
     return render_template('login.html')
 
 @app.route("/signin", methods= ['GET', 'POST'])
@@ -139,60 +140,96 @@ def about():
 #  Admin pages
 
 
-@app.route("/adminlogin", methods = ['GET', 'POST'])
-def adminlogin():
-    if(request.method=='POST'):
-        uname = request.form.get('uname')
-        passwod = request.form.get('password')
+@app.route("/dashboard", methods=['GET', 'POST'])
+def dashboard():
 
-        login = Admin.query.filter_by(name=uname, passwd=passwod).first()
-        if login is not None:
-            return redirect(url_for("admin"))
-        else:
-            return redirect(url_for("adminlogin"))
+    if ('admin' in session and session['admin'] == params['admin_user'] ):
+        return render_template('dashboard.html')
+
+    if request.method == 'POST' :
+        username = request.form.get('uname')
+        userpass = request.form.get('password')
+        if(username == params['admin_user'] and userpass == params['admin_pass']):
+            session['admin'] = username
+            return render_template('dashboard.html')
 
     return render_template('adminlogin.html')
 
-@app.route("/admindashboard" , methods=['GET', 'POST'])
-def admin():
-    document= Document.query.filter_by().all()
-    return render_template('admin.html', document=document)
+@app.route("/admindocument" , methods=['GET', 'POST'])
+def admindocument():
+    if ('admin' in session and session['admin'] == params['admin_user']):
+        document= Document.query.filter_by().all()
+        return render_template('admindocument.html', document=document)
+
+@app.route("/edit/<string:doc_slug>",methods = ['GET' ,'POST'])
+def editdoc(doc_slug):
+    if ('admin' in session and session['admin'] == params['admin_user']):
+        document = Document.query.filter_by(doc_no = doc_slug).first()
+        if request.method == 'POST':
+            doc_name = request.form.get('docname')
+            sub_no = request.form.get('subcode')
+            sem_no = request.form.get('semnum')
+            mod_no = request.form.get('modnum')
+            link = request.form.get('doclink')
+
+            document.doc_name = doc_name
+            document.sub_no = sub_no
+            document.sem_no = sem_no
+            document.mod_no = mod_no
+            document.link = link
+            document.date_time = datetime.now()
+            db.session.commit()
+            return redirect(url_for("admindocument"))
+        return render_template("edit.html", document = document)
 
 @app.route("/deletedoc/<string:docno_slug>", methods = ['GET' ,'POST'])
 def deledoc(docno_slug):
-    Document.query.filter_by(doc_no = docno_slug).delete()
-    db.session.commit()
-    return redirect(url_for("admin"))
+    if ('admin' in session and session['admin'] == params['admin_user']):
+        Document.query.filter_by(doc_no = docno_slug).delete()
+        db.session.commit()
+        return redirect(url_for("admindocument"))
 
 @app.route("/upload", methods = ['GET', 'POST'])
 def upload():
-    if (request.method == 'POST'):
-        '''add entry to database'''
-        doc_name = request.form.get('docname')
-        sub_no = request.form.get('subcode')
-        sem_no = request.form.get('semnum')
-        mod_no = request.form.get('modnum')
-        link = request.form.get('doclink')
-        upload = Document(doc_name = doc_name, sub_no = sub_no, sem_no = sem_no, mod_no = mod_no, link = link, date_time = datetime.now())
-        db.session.add(upload)
-        db.session.commit()
-    return render_template('upload.html', params=params)
+    if ('admin' in session and session['admin'] == params['admin_user']):
+        if (request.method == 'POST'):
+            '''add entry to database'''
+            doc_name = request.form.get('docname')
+            sub_no = request.form.get('subcode')
+            sem_no = request.form.get('semnum')
+            mod_no = request.form.get('modnum')
+            link = request.form.get('doclink')
+            upload = Document(doc_name = doc_name, sub_no = sub_no, sem_no = sem_no, mod_no = mod_no, link = link, date_time = datetime.now())
+            db.session.add(upload)
+            db.session.commit()
+        return render_template('upload.html', params=params)
 
 @app.route("/users", methods=['GET', 'POST'])
 def user():
-    user = User.query.filter_by().all()
-    return render_template('users.html', user=user)
+    if ('admin' in session and session['admin'] == params['admin_user']):
+        user = User.query.filter_by().all()
+        return render_template('users.html', user=user)
 
 @app.route("/deleteuser/<string:usn_slug>", methods = ['GET' ,'POST'])
 def deleuser(usn_slug):
-    User.query.filter_by(usn = usn_slug).delete()
-    db.session.commit()
-    return redirect(url_for("user"))
+    if ('admin' in session and session['admin'] == params['admin_user']):
+        User.query.filter_by(usn = usn_slug).delete()
+        db.session.commit()
+        return redirect(url_for("user"))
 
 @app.route("/conadmin", methods=['GET', 'POST'])
 def conadmin():
-    contact = Contact.query.filter_by().all()
-    return render_template('conadmin.html', contact=contact)
+    if ('admin' in session and session['admin'] == params['admin_user']):
+        contact = Contact.query.filter_by().all()
+        return render_template('conadmin.html', contact=contact)
+
+@app.route("/logout")
+def logout():
+    session.pop('admin')
+    return redirect("/dashboard")
+
+
+
 
 
 app.run(debug=True)

@@ -152,10 +152,6 @@
       text-align: center;
   }
   
-  .doc_link i {
-      color: #364182;
-  }
-  
   .doc_link:hover {
       background: #D9D7E9;
   }

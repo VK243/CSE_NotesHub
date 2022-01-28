@@ -11104,6 +11104,10 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+.nav{
+    padding-left: 20px;
+}
+
 .logo {
     background: #fff;
     width: 200px;
@@ -11201,15 +11205,18 @@ body {
     width: 100%;
 }
 
+tr td {
+        text-align: center;
+}
+
 tr td a {
     text-decoration: none;
-    color: #364182;
-    text-align: center;
+    color: #000;
     font-weight: 400;
 }
 
 tr td a:hover {
-    color: #000;
+    color: #fff;
     font-weight: 600;
 }
 
@@ -11217,4 +11224,26 @@ tr td a:hover {
     .logo {
         width: 100px;
     }
+}
+
+.display-card{
+    padding: 0px;
+}
+
+.display-card .card{
+    padding: 20px 25px;
+    margin: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.display-card .card a{
+    text-decoration: none;
+    color: #364182;
+}
+
+.display-card .card a:hover{
+    transform: scale(1.11);
+    transition: 0.3s;
 }

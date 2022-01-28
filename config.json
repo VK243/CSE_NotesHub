@@ -6,6 +6,10 @@
     "prod_uri": "mysql://root:@localhost/enotes_db",
     "landing_header": "CSE in one place",
     "landing_tagline": "Get your CSE related notes, question paper and syllabus here.",
-    "github": "https://github.com/VK243/CSE_NotesHub"
+    "gmail": "csenoteshub@gmail.com",
+    "github": "https://github.com/VK243/CSE_NotesHub",
+    "linkedin": "https://www.linkedin.com/in/iam-vk",
+    "admin_user": "admin",
+    "admin_pass": "@dmin123"
   }
 }

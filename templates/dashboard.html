@@ -1,0 +1,70 @@
+ {% extends "adminlayout.html" %} {% block body %}
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav" class="theme-sidenav">
+        <nav class="sb-sidenav accordion " id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <hr>
+                    <a class="nav-link sidenav" href="/dashboard" style="font-weight: 900; letter-spacing: 1px;">
+                            DASHBOARD
+                        </a>
+                        <hr>
+                    <a class="nav-link sidenav" href="/admindocument">
+                        <div class="sb-nav-link-icon"><i class="far fa-file-alt"></i></div>
+                        Documents
+                    </a>
+                    <a class="nav-link sidenav" href="/upload">
+                        <div class="sb-nav-link-icon"><i class="fas fa-file-upload"></i></div>
+                        Upload
+                    </a>
+                    <a class="nav-link sidenav" href="/users">
+                        <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                        Users
+                    </a>
+                    <a class="nav-link sidenav" href="/conadmin">
+                        <div class="sb-nav-link-icon"><i class="far fa-address-book"></i></div>
+                        Contacts
+                    </a>
+
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        ADMIN
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4" style="padding-left: 20px;">ADMIN PANEL</h1>
+                    <ol class="breadcrumb mb-4"style="padding-left: 20px;">
+                        <li class="breadcrumb-item active">Manage your documents and change them</li>
+                    </ol>
+                    <div class="container">
+                      <div class="row display-card">
+                        <div class="col-md-4 card">
+                            <a href="/admindocument">DOCUMENTS</a>
+                        </div>
+                        <div class="col-md-4 card">
+                            <a href="/upload">UPLOAD</a>
+                            
+                        </div>
+                        <div class="col-md-4 card">
+                        <a href="/users">USERS</a>            
+                            
+                        </div>
+                        <div class="col-md-4 card">
+                            <a href="/conadmin">CONTACTS</a>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </main>
+
+
+
+            {% endblock %}

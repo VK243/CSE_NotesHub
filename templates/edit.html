@@ -51,7 +51,7 @@
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav" class="theme-sidenav" style="text-align: left;">
-            <nav class="sb-sidenav accordion " id="sidenavAccordion" >
+            <nav class="sb-sidenav accordion " id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <hr>
@@ -63,7 +63,7 @@
                             <div class="sb-nav-link-icon"><i class="far fa-file-alt"></i></div>
                             Documents
                         </a>
-                        <a class="nav-link sidenav" href="/upload" style="font-weight: 800;">
+                        <a class="nav-link sidenav" href="/upload">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-upload"></i></div>
                             Upload
                         </a>
@@ -88,30 +88,30 @@
                 <main>
                     <!-- Upload table -->
                     <section class="upload">
-                        <h1 class="title">Upload Document</h1>
-                        <form class="up-form row" action="/upload" method="post" enctype="multipart/form-data">
+                        <h1 class="title">Edit Document</h1>
+                        <form class="up-form row" action="/edit/{{document.doc_no}}" method="post" enctype="multipart/form-data">
                             <div class="form-field col-lg-6">
                                 <label class="label" for="name">Document Name</label>
-                                <input id="name" name="docname" class="input-text js-input" type="text" required>
+                                <input id="name" name="docname" class="input-text js-input" type="text" value="{{document.doc_name}}" required >
                             </div>
                             <div class="form-field col-lg-6 ">
                                 <label class="label" for="email">Semester</label>
-                                <input id="sem" name="semnum" class="input-text js-input" type="text" required>
+                                <input id="sem" name="semnum" class="input-text js-input" type="text" value="{{document.sem_no}}" required>
                             </div>
                             <div class="form-field col-lg-6 ">
                                 <label class="label" for="company">Subject Code</label>
-                                <input id="subcode" name="subcode" class="input-text js-input" type="text" required>
+                                <input id="subcode" name="subcode" class="input-text js-input" type="text" value="{{document.sub_no}}" required>
                             </div>
                             <div class="form-field col-lg-6 ">
                                 <label class="label" for="phone">Module No.</label>
-                                <input id="module" name="modnum" class="input-text js-input" type="text" required>
+                                <input id="module" name="modnum" class="input-text js-input" type="text" value="{{document.mod_no}}" required>
                             </div>
                             <div class="form-field col-lg-6">
-                                <label class="label" for="message"> <img src="{{ url_for('static', filename='template/gdrive.png') }}" alt="">  Drive Link</label>
-                                <input id="file" name="doclink" class="input-text js-input" type="url">
+                                <label class="label" for="message"><img src="{{ url_for('static', filename='template/gdrive.png') }}" alt="">  Drive Link</label>
+                                <input id="file" name="doclink" class="input-text js-input" type="url" value="{{document.link}}" required>
                             </div>
                             <div class="form-field col-lg-12">
-                                <input class="submit-btn" type="submit" value="Upload">
+                                <input class="submit-btn" type="submit" value="SAVE">
                             </div>
                         </form>
                     </section>

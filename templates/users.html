@@ -4,11 +4,13 @@
         <nav class="sb-sidenav accordion " id="sidenavAccordion">
             <div class="sb-sidenav-menu">
                 <div class="nav">
-                    <div class="sb-sidenav-menu-heading">Core</div>
-                    <a class="nav-link sidenav" href="/admindashboard">
-                        <div class="sb-nav-link-icon">
-                            <i class="far fa-file-alt"></i>
-                        </div>
+                    <hr>
+                    <a class="nav-link sidenav" href="/dashboard" style="font-weight: 700; letter-spacing: 1px;">
+                            DASHBOARD
+                        </a>
+                        <hr>
+                    <a class="nav-link sidenav" href="/admindocument">
+                        <div class="sb-nav-link-icon"><i class="far fa-file-alt"></i></div>
                         Documents
                     </a>
                     <a class="nav-link sidenav" href="/upload">
@@ -28,6 +30,8 @@
                         <div class="small">Logged in as:</div>
                         ADMIN
                     </div>
+                </div>
+            </div>
         </nav>
         </div>
 
@@ -66,7 +70,7 @@
                                         <td>{{user.usn}}</td>
                                         <td>{{user.user_name}}</td>
                                         <td>{{user.email}}</td>
-                                        <td><a href="/deleteuser/{{user.usn}}"><i class="far fa-trash-alt"></i>  Delete</a></td>
+                                        <td><a href="/deleteuser/{{user.usn}}"><button class="btn btn-outline-dark"><i class="far fa-trash-alt"></i></button></a></td>
                                     </tr>
                                     {% endfor %}
                                 </tbody>

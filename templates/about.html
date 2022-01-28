@@ -16,7 +16,7 @@
     <nav id="Nav">
         <a href="/"><img class="nav_logo" src="{{ url_for('static', filename='template/logo.svg') }}" alt="logo"></a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="/about">ABOUT</a></li>
+            <li><a href="{{params['linkedin']}}" target="blank">ABOUT ME</a></li>
         </ul>
         <i class="fas fa-ellipsis-v" onclick="togglebtn()"></i>
     </nav>
@@ -24,11 +24,25 @@
         <div class="about-heading">
             <h1 style="font-family: 'Oleo Script', cursive;">ABOUT</h1>
         </div>
-        <div class="img">
+<!--         <div class="img">
             <img src="{{ url_for('static', filename='template/about.svg') }}" alt="about_img">
-        </div>
+        </div> -->
         <div class="content">
-            <p></p>
+            <p>
+                <span>CSE NotesHUB</span> is a online notes portal. This is a <span>DBMS mini-project</span> for BE- Computer Science 5th semester in the year of 2021-2022.<br> This web application is useful for university students and professors of CSE department, for storing all subject module notes, question paper, syllabus copy and many other related things in a well-organised way. This application also allows the admin to modify, upload and delete the data from the database.
+                <br><br>
+                This web application was coded using 
+                <br>Frontend: HTML5, CSS3, JavaScript
+                <br>Framework: Bootstrap 5
+                <br>Database: MySQL
+                <br>Backend: Python, Flask
+                
+                <br><br><br>
+                Web-application developed by <br><a href="{{params['linkedin']}}" target="blank"><span>Varshith Kumar</span></a>
+
+
+
+            </p>
 
         </div>
 

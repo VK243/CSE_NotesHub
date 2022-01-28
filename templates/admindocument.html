@@ -4,8 +4,12 @@
         <nav class="sb-sidenav accordion " id="sidenavAccordion">
             <div class="sb-sidenav-menu">
                 <div class="nav">
-                    <div class="sb-sidenav-menu-heading">Core</div>
-                    <a class="nav-link sidenav" href="/admindashboard" style="font-weight: 800;">
+                    <hr>
+                    <a class="nav-link sidenav" href="/dashboard" style="font-weight: 700; letter-spacing: 1px;">
+                            DASHBOARD
+                        </a>
+                        <hr>
+                    <a class="nav-link sidenav" href="/admindocument" style="font-weight: 800;">
                         <div class="sb-nav-link-icon"><i class="far fa-file-alt"></i></div>
                         Documents
                     </a>
@@ -26,6 +30,8 @@
                         <div class="small">Logged in as:</div>
                         ADMIN
                     </div>
+                </div>
+            </div>
         </nav>
         </div>
 
@@ -50,6 +56,7 @@
                                         <th>Sem No</th>
                                         <th>Subject Code</th>
                                         <th>Module No</th>
+                                        <th>Edit</th>
                                         <th>Document Link</th>
                                         <th>Delete</th>
                                         <th>Date Time</th>
@@ -61,6 +68,7 @@
                                         <th>Sem No</th>
                                         <th>Subject Code</th>
                                         <th>Module No</th>
+                                        <th>Edit</th>
                                         <th>Document link</th>
                                         <th>Date Time</th>
                                     </tr>
@@ -73,8 +81,9 @@
                                         <td>{{document.sem_no}}</td>
                                         <td>{{document.sub_no}}</td>
                                         <td>{{document.mod_no}}</td>
-                                        <td><a href="{{document.link}}" target="blank"><i class="fab fa-google-drive"></i>     Open</a></td>
-                                        <td><a href="/deletedoc/{{document.doc_no}}"><i class="far fa-trash-alt"></i>  Delete</a></td>
+                                        <td><a href="/edit/{{document.doc_no}}"><button class="btn btn-outline-dark">Edit</button></a></td>
+                                        <td><a href="{{document.link}}" target="blank"><button class="btn btn-outline-dark"><i class="fab fa-google-drive"></i></button></a></td>
+                                        <td><a href="/deletedoc/{{document.doc_no}}"><button class="btn btn-outline-dark"><i class="far fa-trash-alt"></i></button></a></td>
                                         <td>{{document.date_time}}</td>
                                     </tr>
                                     {% endfor %}
